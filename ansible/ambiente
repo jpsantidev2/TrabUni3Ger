@@ -1,0 +1,12 @@
+- name: Configurar arquivo do ambiente
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    ansible_python_interpreter: "{{ ansible_playbook_python }}"
+  tasks:
+    - name: Garantir configuracao do ambiente
+      ansible.builtin.copy:
+        dest: "{{ playbook_dir }}/ambiente.txt"
+        content: "AMBIENTE=homologacao\n"
+        mode: "0644"
