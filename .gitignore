@@ -1,0 +1,30 @@
+# Ambiente Python e arquivos gerados pelo interpretador
+.venv/
+__pycache__/
+*.py[cod]
+
+# Cache, estado e planos do Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+terraform/plano-*
+crash.log
+crash.*.log
+
+# Recursos locais gerados durante os exercícios
+terraform/ambiente.txt
+ansible/ambiente.txt
+ansible/pasta-inexistente/
+*.retry
+
+# Configurações locais que podem conter segredos
+.env
+.env.*
+!.env.example
+
+# Arquivos auxiliares de sistemas operacionais
+.DS_Store
+Thumbs.db
+
+# O arquivo terraform/.terraform.lock.hcl deve permanecer versionado.
