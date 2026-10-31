@@ -10,6 +10,6 @@ terraform {
 
 resource "local_file" "ambiente" {
   filename        = "${path.module}/ambiente.txt"
-  content         = "AMBIENTE=homologacao\n"
+  content = "AMBIENTE=homologacao\nVERSAO=2\n"
   file_permission = "0644"
 }
